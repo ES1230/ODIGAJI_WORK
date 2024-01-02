@@ -42,9 +42,9 @@
 
 
     <!-- basic css -->
-    <link rel="stylesheet" href="../../../source/style/css/ensun.css/basicTool.css">
+    <link rel="stylesheet" href="./source/style/css/ensun.css/basicTool.css">
     <!-- tfview css -->
-    <link rel="stylesheet" href="../../../source/style/css/ensun.css/tfview.css">
+    <link rel="stylesheet" href="./source/style/css/ensun.css/tfview.css">
 
 </head>
 <body>

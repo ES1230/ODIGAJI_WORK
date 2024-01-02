@@ -1,13 +1,13 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- 파비콘 -->
   <link rel="shortcut icon" href="./images/tomorrow1.gif">
   <title>Odigaji</title>
-
   <!-- <link rel="stylesheet" href="./"> -->
   <!--브라우저 스타일 초기화-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
@@ -26,18 +26,14 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <!-- chat icon -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  
-  
   <!--Swiper-->
   <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
-
-
   <!-- css -->
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="<%= request.getContextPath() %>/source/style/css/ejun.css/main.css">
   <!-- <link rel="stylesheet" href="./css/basicTool.css"> -->
   <!-- js -->
-  <script defer src="./js/common.js"></script>
+  <script defer src="<%= request.getContextPath() %>/source/js/ejun.js/common.js"></script>
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -46,11 +42,10 @@
   <header>
     <div class="inner">
       <a href="/" class="logo">
-        <img src="./images/odigaji_logo.png" alt="ODIGAJI" />
+        <img src="<%= request.getContextPath() %>/source/style/img/index_img/odigaji_logo.png" alt="ODIGAJI" />
       </a>
-
       <div class="sub-menu"> <!-- 로그인 마이페이지 찜 채팅-->
-        <ul class="menu">  
+        <ul class="menu">
           <li>
             <a href="/signin/index.html"><span class="material-symbols-outlined">login</span>로그인</a>
           </li>
@@ -68,17 +63,21 @@
           </li>
         </ul>
       </div>
-
       <ul class="main-menu"> <!-- 여행지&축제 맛집&카페 게시판-->                        <!--html 변경 부분-->
-        <li class="item">                                                               
-          <div class="item__name">여행지&축제</div>
+        <li class="item">
+          <!-- <div class="item__name"> -->
+          	<button type="butoon item_name"><a href="tfview.bo">여행지&축제</a></button>
+          <!-- </div> -->
           <div class="item__contents">
-            <div class="contents__menu">                         
-              <ul class="inner">         
-                <li>                         
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
                   <h4>지역</h4>
                   <ul>
-                    <li>서울&경기</li>
+                    <li>
+                    <a href="<%= request.getContextPath() %>/tfview?region=서울">서울&경기</a>
+<!--                     서울&경기 -->
+                    </li>
                     <li>전라도</li>
                     <li>경상도</li>
                   </ul>
@@ -111,7 +110,7 @@
               </ul>
             </div>
           </div>
-        </li>                                                                  
+        </li>
         <li class="item">
           <div class="item__name">맛집&카페</div>
           <div class="item__contents">
@@ -154,7 +153,7 @@
               </ul>
             </div>
           </div>
-        </li>                                                           
+        </li>
         <li class="item">
           <div class="item__name">게시판</div>
           <div class="item__contents">
@@ -167,21 +166,16 @@
                     <li>공지사항 게시판</li>
                     <li>자유 게시판</li>
                   </ul>
-                </li>  
+                </li>
               </ul>
             </div>
           </div>
         </li>
       </ul>                                                                             <!--html 변경 부분-->
-
     </div>
   </header>
   <!-- TOP SECTION (프로모션 스와이퍼)-->
-
-  
     <div class="inner">
-
-      
       <div class="promotion">
         <div class="text1">낭만이 가득한 <br>겨울 여행으로 떠나요</div>
         <div class="text2">마음의 온도를높이는<br>겨울 여행지 추천!</div>
@@ -201,26 +195,18 @@
             </div>
           </div>
         </div>
-  
         <div class="swiper-pagination"></div>
-  
         <div class="swiper-prev">
           <span class="material-icons">arrow_back</span>
         </div>
         <div class="swiper-next">
           <span class="material-icons">arrow_forward</span>
         </div>
-  
       </div>
       <div class="line1"></div>
     </div>
-
-
-
   <!--LEFT SIDEBAR 채팅창-->
-  
   <div class="left-sidebar"></div>
-
   <!--RIGHT SIDEBARA 회원별 여행지 추천-->
   <div class="inner">
     <button type="button" class="material-symbols-outlined" onclick="right_sidebar_close()"  style="display: block">
@@ -231,13 +217,8 @@
       <p>회원별 추천 여행</p>
     </div>
   </div>
-
   <!-- MIDDLE SECTION 오늘의 여행지 추천 -->
-
-
     <div class="inner">
-
-      
       <div class="tomorrow-suggestion">
         <div class="text3">오늘의 여행지 추천!</div>
         <div class="swiper-container">
@@ -257,18 +238,10 @@
           </div>
         </div>
       </div>
-
     <div class="line2"></div>
     </div>
-    
-
-
   <!-- BOTTOM SECTION 20~30대 HOT 여행지 TOP-->
-
-
     <div class="inner">
-
-      
       <div class="hot5-suggestion">
         <div class="text3">20~30대 HOT 여행지 Top 5</div>
         <div class="swiper-container">
@@ -288,9 +261,7 @@
           </div>
         </div>
       </div>
-
     </div>
-    
   <!--FOOTER-->
   <footer>
     <div class="inner">
@@ -312,15 +283,11 @@
           <p>asdsad</p>
         </div>
       </div>
-    
-
     </div>
   </footer>
-
   <!--TO TOP BUTTON-->
   <div id="to-top">
     <a href="#"><div class="material-icons">arrow_upward</div></a>
-    
   </div>
 </body>
 </html>

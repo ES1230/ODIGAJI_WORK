@@ -341,7 +341,7 @@ img {
   /* max-width 1050 + 150 */
   /* height: 1330px ; */
   height: 1600px;
-  top: -350px;
+  /* top: -350px; */
   left: -360px;
   background-color: rgb(247, 233, 247);
   z-index: 2;
