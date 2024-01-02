@@ -1,0 +1,114 @@
+/* 공통 */
+main{
+    font-family: 'SBAggroM';
+    margin: 120px auto 10px; /* 헤더 높이만큼 여백 150추가*/
+    overflow: hidden;  /* 내용이 부모를 넘어가지 않게함 */
+}
+section{  
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 850px;
+    margin: auto;
+    padding: 30px;
+}
+section li{
+    list-style: none;
+}
+
+/* --------------- 내가 찜한 정보 & 휴지통 --------------- */
+
+.wish-main p{
+    font-family: 'SBAggroB';
+    font-size: 40px;
+    margin-top: 10px;
+    padding: 6px;
+    color:  rgb(101, 49, 101);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.wish-main-explain{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'SBAggroL';
+    font-size: 18px;
+    padding: 7px;
+}
+.delete{  /* 휴지통 */
+    cursor: pointer;
+    font-size: 40px;
+    margin-bottom: 0px;
+    position: relative;    
+    top: 5px;
+    left: 5px;
+}
+.delete:hover{
+    color: red;
+}
+
+
+/* --------------- 카테코리 --------------- */
+
+.outer{
+    background-color:  rgb(240, 226, 240);
+    border-radius: 8px;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.categories{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(198, 152, 198, 0.5);
+}
+.category{
+    font-size: 20px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+/* 카테고리 선택됐을 때 적용되는 스타일 */
+.category.selected-category {
+    background-color: rgb(144, 84, 144);
+    border-radius: 8px;
+    color: rgb(246, 235, 246);
+    font-family: 'SBAggroB';
+}
+.category:hover{
+    -webkit-transition: all .3s;
+    background-color: rgb(144, 84, 144);
+    border-radius: 8px;
+    color: rgb(246, 235, 246);
+    font-family: 'SBAggroB';
+    cursor: pointer;
+}
+
+/* 이미지 스타일 */
+.category-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.content{
+    background-color: rgb(255, 255, 255, 0.7);
+    border: 1px solid rgb(223, 195, 223, 0.6);
+    padding: 10px;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column
+}
+.content input{
+    margin-left: 5px;
+    position: relative;    
+    top: -2px;
+    left: 70px;
+}
+.content img{
+    width: 210px;
+    height: 210px;
+    padding: 5px;
+}
+

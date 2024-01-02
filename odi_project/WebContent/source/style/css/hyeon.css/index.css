@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;500&family=Noto+Sans+KR:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    
+}
+
+body {
+    min-width: 1300px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* LOGO 스타일 */
+#index_logo{
+    width:150px;
+    height:auto;
+    margin-bottom: 10px;
+}
+
+
+/* 전체 배경화면 사진 */
+article{
+    background-image : url('https://www.visitseoul.net/comm/getImage?srvcId=VS_MAIN_TYPE_0&parentSn=161&fileTy=IMG&fileNo=7');
+    background-repeat: no-repeat;
+    background-size : auto 1300px;
+}
+
+hr{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+
+/* 전체 배경 크기 */
+.wrapper {
+    max-width:1300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* AM/PM 글씨 크기 작게 설정 */
+.am-style, .small-text {
+    font-size: 30px; 
+}
+
+/* 시간 글씨 크기 크게 설정 */
+.large-text {
+    font-size: 90px; 
+}
+
+
+
+/* 첫번째 section 정렬 */
+.section-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* 첫번째 section 오른쪽에 위치한 속한 로고 정렬 */
+.intro-item-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* TOGETHER ODIGAJI LET'S GO! 사진 크기 조절 */
+.intro-item-title img {
+    max-width: 300px;
+    height: auto;
+    margin-left:50px;
+}
+
+/* 현재시간 스타일 */
+.nowtime {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+/* 날짜 배경색 및 높이 설정 */
+.weather-time{
+    /* background-color : rgba(199, 197, 204, 0.4); */
+    padding : 50px;
+    color : #fff;
+    height : 300px;
+}
+
+
+
+/* 날씨 아이콘 크기 */
+.SeoulIcon img {
+    width:80px;
+}
+
+
+
+/* 지도 스타일 */
+.OUTLINE {
+    stroke-linejoin:round;
+    stroke: #020202;
+    stroke-width: 2;
+    fill: #f7f7f7;
+}
+
+/* 지도 스타일 hover */
+.OUTLINE:hover{
+    fill: #D0A9F5;
+}
+
+/* 지도 텍스트 hover */
+.TEXT:hover{
+    background-color: #D0A9F5;
+}
+
+/* 지도 텍스트 스타일 */
+.TEXT {
+    fill: #080808;
+    font-size: 20px;
+    font-weight: bold;
+    text-anchor: middle;
+    alignment-baseline: middle;
+}
+
+
+
+/* 2번째 section 정렬 */
+.section-intro2 {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center; /* SVG를 수직 가운데 정렬 */
+    height: 80vh;
+}
+
+/* 여행 축제 소개 스타일 */
+.introduce-travel-index {
+    box-sizing: border-box;
+    background-color: rgb(51, 50, 50);
+    width : 440px;
+    height : auto;
+    display:inline-block;
+    margin-right:120px;
+}
+
+/* 지도 */
+svg{
+    width : 600px;
+    height : 620px;
+    margin-left:100px;
+}
+
+/* 소개사진 부분 */
+.introduce-img{
+    width:220px;
+    height:150px;
+    /* border: 1px solid black; */
+}
+
+/* 소개사진 */
+.introduce-img-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px; /* Adjust the gap between images */
+    
+}
+
+/* 소개 내용 */
+.introduce-content-container{
+    font-family: 'IBM Plex Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin : 30px;
+    color:white;
+}
+
+
+/* 지역 소개 img 크기 변화 느리게 */
+.introduce-img-container{
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 지역 소개 img hover시 크기 조절 */
+.introduce-img-container:hover {
+    transform: scale(1.1);
+}
+
+/* 지역소개 내용 마우스 포인터 변경 */
+.introduce-travel-index {
+    cursor: pointer;
+}

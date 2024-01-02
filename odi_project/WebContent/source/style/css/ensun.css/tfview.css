@@ -1,0 +1,292 @@
+.container{
+    margin-top: 6.7%;
+    margin-left: 12.6%;
+    background-color: white;
+}
+
+/* ---------- 타이틀 ---------- */
+
+.title{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* 여행지&축제 */
+.title p{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'SBAggroB';
+    font-size: 30px;
+    color:  rgb(101, 49, 101);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* 글작성 - 관리자용 */
+.write_admin{
+    display: none;
+    height: 35px;
+    font-family: 'SBAggroM';
+    background-color: lightgray;
+    color: rgb(41, 41, 41);
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.write_admin:hover{
+    background-color: rgb(83, 22, 83);
+    color: white;
+}
+
+/* 검색버튼- 돋보기 */
+#search-label {
+    position: relative;
+}
+#search-label button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+}
+#search-label img{
+    width: 25px;
+    height: 100%;
+}
+
+/* 검색 카테고리 */
+.head-keyword{
+    float: right;
+    margin-right: 170px;
+}
+
+.head-keyword select{
+    margin: 5px auto;
+    height: 35px;
+    width: 100px;
+    border-radius: 3px;
+    font-family: 'SBAggroM';
+    /* text-align: center; */
+    border: 1px solid rgb(76, 76, 76, 0.6);
+}
+
+/* 검색란 */
+#keyword{
+    width: 220px;
+    height: 30px;
+    padding: 2px;
+    padding-left: 10px;
+    border-radius: 3px;
+    font-family: 'SBAggroL';
+}
+
+
+/* ---------- 본문 내용 ---------- */
+
+/* 사진 div박스 */
+.tf_item{
+    margin: 3%;
+    position: relative;
+}
+
+.thumb_box{
+    height: 100%;
+    width: 270px;
+}
+
+.tf_img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 270px;
+    border-radius: 3%;
+    border: 1px solid rgb(138, 138, 138, 0.5);
+}
+
+
+/* 이미지 hover 적용 */
+.thumb_box img:hover{   
+    -webkit-transition: all .5s;
+    transform : scale(1.05);
+}
+/* 하트아이콘 */
+.btn_wish,.btn_wish_red {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    margin-right: 2px;
+    width: 25px;
+    /* z-index: 1; */
+    /* bottom: 0; */
+}
+.btn_wish:hover{
+    width: 25px;
+}
+
+.btn_wish_red{
+    display: none;
+}
+
+/* 글내용 제목 */
+h1 {
+    font-family: 'SBAggroM';
+    position: absolute;
+    color: rgb(52, 52, 52);
+    margin: 8px;
+    font-size: 20px;
+}
+.tf_home {
+    width: 100%;
+    max-height: 1050px; 
+    /* Set the maximum height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-bottom: 100px;
+}
+
+.tf_home > * {
+    flex-basis: 13.5%;
+    box-sizing: border-box;
+}
+
+
+
+/* ---------- 사이드바 ---------- */
+
+.category{
+    margin: 5px;
+    padding: 5px;
+    margin-top: 450px;
+}
+.category li{
+    font-family: 'SBAggroL';
+    font-size: 15px;
+    color: rgb(61, 61, 61);
+}
+
+.category ul,li{
+    padding: 5px;
+}
+.category li label:hover{
+    color: purple;
+    font-family: 'SBAggroB';
+    -webkit-transition: all .5s;
+}
+
+.categoryTitle{
+    font-size: 17px;
+    color: rgb(93, 13, 93);
+}
+
+.live-chat div{
+    padding: 10px;
+    border-bottom: 0;
+}
+
+/* 상세필터 */
+.filter{
+    margin: 5px;
+}
+
+/* 상세필터 메뉴버튼 */
+#filter span{
+    font-size: 15px;
+    float: right;
+    margin-right: 10px;
+}
+
+
+/* 카테고리 제목 */
+.categorylist{
+    font-family: 'SBAggroB';
+    margin-top: 20px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(75, 50, 75, 0.5);
+}
+.categorylist span{
+    float: right;
+    margin-right: 5px;
+}
+
+
+/* 지역 카테고리 */
+.region{
+    display:flex;
+}
+.regiondiv{
+    flex-direction: column;
+    width: 45%;
+    /* margin-left: 10px; */
+}
+
+/* 계절 카테고리 */
+.season{
+    display: flex;
+}
+.seasondiv{
+    flex-direction: column;
+    width: 45%;
+}
+
+/* 테마 카테고리 */
+.theme{
+    display: flex;
+}
+.themediv{
+    flex-direction: column;
+    width: 45%;
+}
+
+
+/* 라이브채팅 */
+.live-chatting{
+    margin: 5px auto;
+    width: 85%;
+    height: 230px;
+    background-color: white;
+    color: rgb(34, 32, 32);
+    padding: 10px;
+    font-family: 'SBAggroL';
+    font-size: 14px;
+    flex-direction: column;
+}
+
+
+/* ---사이드바 이벤트 --- */
+
+/* 화살표 돌아가는 이벤트 */
+.rotate180{
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out; /* 회전 애니메이션을 부드럽게 만들기 위해 트랜지션 추가 */
+}
+.rotate0{
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out; /* 회전 애니메이션을 부드럽게 만들기 위해 트랜지션 추가 */
+}
+
+
+
+/* ---------- 스크롤 버튼  ----------*/
+.scrollButton{
+    height: 40px;
+    width: 43px;
+    position: fixed;
+    background-color: rgb(138, 101, 138);
+    border: 1px solid rgba(205, 174, 205, 0.5);
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+.upButton{
+    bottom: 40px;
+    right: 40px;
+}
+.scrollButton:hover{
+    cursor: pointer;
+}
