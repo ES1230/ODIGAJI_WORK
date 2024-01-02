@@ -1,6 +1,7 @@
 package odi_project.board.model.vo;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -28,5 +29,7 @@ public class Board {
 	private String status; //삭제상태
 	private String memberId; //작성자 id
 	private String categoryNo; //카테고리번호 (카테고리테이블과 연결)
+	
+	private ArrayList<Reply> list;
 
 }
