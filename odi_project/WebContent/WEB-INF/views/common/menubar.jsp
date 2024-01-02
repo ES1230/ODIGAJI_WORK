@@ -162,7 +162,7 @@
                   <ul>
                     <li>동행 게시판</li>
                     <li>공지사항 게시판</li>
-                    <li>자유 게시판</li>
+                    <li onclick='location.href="commonlist.bo?currentPage=1"'>자유 게시판</li>
                   </ul>
                 </li>
               </ul>
