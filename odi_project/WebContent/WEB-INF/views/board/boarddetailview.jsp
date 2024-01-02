@@ -1,6 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +39,7 @@
 </head>
 
 <body>
+	<jsp:include page="../common/menubar.jsp"></jsp:include>
   <!--HEADER-->
   <header>
     <div class="inner">
@@ -244,13 +246,23 @@
             <td width="400"><textarea></textarea></td>
             <td width="100"><button>등록</button></td>
           </tr>
-          <tr>
-          </tr>
+          
             <tr>
               <td>아이디</td>
               <td>댓글내용</td>
               <td>댓글작성일</td>
             </tr>
+            
+          <tr>
+          	<td><b>댓글(${list.size()})</b></td>
+          </tr>
+          <c:forEach var="reply" items='${list}'>
+            <tr>
+              <td>${reply.replyUserId }</td>
+              <td>${reply.boardContent }</td>
+              <td>${reply.createDate }</td>
+            </tr>
+            </c:forEach>
         </table>
       </div>
     </div>
@@ -294,5 +306,4 @@
 
  
 </body>
-
 </html>
